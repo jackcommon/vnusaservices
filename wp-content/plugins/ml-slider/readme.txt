@@ -4,7 +4,7 @@ Tags: wordpress slideshow,seo,slideshow,slider,widget,wordpress slider,image sli
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CQ84KC4X8YKW8
 Requires at least: 3.5
 Tested up to: 3.9
-Stable tag: 2.8
+Stable tag: 2.9
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -61,6 +61,8 @@ Upgrade to [Meta Slider Pro](http://www.metaslider.com/upgrade) to add support f
 * Taiwanese (thanks to 断青丝)
 * Norwegian (thanks to Dreamsoft)
 * Romanian (thanks to Octav Madalin Stanoaia)
+* Japanese (thanks to Dorrie)
+* Persian (thanks to aliamini)
 * Croatian
 
 Read more and thanks to:
@@ -135,6 +137,16 @@ See www.metaslider.com/documentation/image-cropping/
 6. Administration panel - selecting slides
 
 == Changelog ==
+
+= 2.9 [25/06/14] =
+
+* New feature: Japanese Language Pack added
+* New feature: Persian Language Pack added
+* New feature: Switch between tab and list view
+* New feature: Added ms-left and ms-right css classes to align slideshow to left or right
+* Improvement: Flex Slider updated to 2.3.0-bleeding (fix initial image fade)
+* Fix: reference to window.parent in media library
+* Fix: Thumbnail outline in firefox
 
 = 2.8.1 [28/04/14] =
 
