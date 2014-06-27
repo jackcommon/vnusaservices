@@ -2,7 +2,7 @@
 
 // Exit if accessed directly
 if( !defined( 'ABSPATH' ) ) {
-	exit;
+  exit;
 }
 
 /**
@@ -21,53 +21,53 @@ if( !defined( 'ABSPATH' ) ) {
  */
 
 get_header(); ?>
+<div id="content" class="grid col-620" style="overflow: hidden; float: right; dislay: inline-block; width: 250px;">
+  <?php if( have_posts() ) : ?>
 
-<div id="content" class="grid col-620">
+    <?php while( have_posts() ) : the_post(); ?>
 
-	<?php if( have_posts() ) : ?>
+      <?php responsive_entry_before(); ?>
+      <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <?php responsive_entry_top(); ?>
 
-		<?php while( have_posts() ) : the_post(); ?>
+        <?php get_template_part( 'post-meta-page' ); ?>
 
-			<?php responsive_entry_before(); ?>
-			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php responsive_entry_top(); ?>
+        <div class="post-entry">
+          <?php if( has_post_thumbnail() ) : ?>
+            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
+              <?php the_post_thumbnail(); ?>
+            </a>
+          <?php endif; ?>
+          <?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
+          <?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
+        </div>
+        <!-- end of .post-entry -->
 
-				<?php get_template_part( 'post-meta-page' ); ?>
+        <?php get_template_part( 'post-data' ); ?>
 
-				<div class="post-entry">
-					<?php if( has_post_thumbnail() ) : ?>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail(); ?>
-						</a>
-					<?php endif; ?>
-					<?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
-				</div>
-				<!-- end of .post-entry -->
+        <?php responsive_entry_bottom(); ?>
+      </div><!-- end of #post-<?php the_ID(); ?> -->
+      <?php responsive_entry_after(); ?>
 
-				<?php get_template_part( 'post-data' ); ?>
+      <?php responsive_comments_before(); ?>
+      <?php comments_template( '', true ); ?>
+      <?php responsive_comments_after(); ?>
 
-				<?php responsive_entry_bottom(); ?>
-			</div><!-- end of #post-<?php the_ID(); ?> -->
-			<?php responsive_entry_after(); ?>
+    <?php
+    endwhile;
 
-			<?php responsive_comments_before(); ?>
-			<?php comments_template( '', true ); ?>
-			<?php responsive_comments_after(); ?>
+    get_template_part( 'loop-nav' );
 
-		<?php
-		endwhile;
+  else :
 
-		get_template_part( 'loop-nav' );
+    get_template_part( 'loop-no-posts' );
 
-	else :
-
-		get_template_part( 'loop-no-posts' );
-
-	endif;
-	?>
+  endif;
+  ?>
 
 </div><!-- end of #content -->
-
+<div class='thinh' style="overflow: hidden; float: left; dislay: inline-block; width: 250px;">
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+</div>
+
