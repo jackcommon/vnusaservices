@@ -40,6 +40,8 @@ if( !defined( 'ABSPATH' ) ) {
 
 		<link rel="profile" href="http://gmpg.org/xfn/11"/>
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>"/>
+		<link href="<?php echo get_template_directory_uri(); ?>/core/css/home.css"/>
+
 
 		<?php wp_head(); ?>
 	</head>
@@ -75,6 +77,10 @@ if( !defined( 'ABSPATH' ) ) {
 			<div id="logo">
 				<a href="<?php echo home_url( '/' ); ?>"><img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a>
 			</div><!-- end of #logo -->
+			<div id="banner_top">
+				<img src="<?php echo get_template_directory_uri(); ?>/core/images/banner.png" width="630" height="219" alt="<?php bloginfo( 'name' ); ?>"/>
+			</div>
+			<!-- /#banner_top -->
 
 		<?php endif; // header image was removed ?>
 
@@ -110,9 +116,16 @@ if( !defined( 'ABSPATH' ) ) {
 		<?php responsive_header_bottom(); // after header content hook ?>
 
 	</div><!-- end of #header -->
+<div class="silde-header" style="margin-bottom: 30px;">
+	<?php 
+	        echo do_shortcode("[metaslider id=30]"); // replace 123 with your slideshow ID
+	?>
+<!-- /.silde-header --></div>	
 <?php responsive_header_end(); // after header container hook ?>
 
 <?php responsive_wrapper(); // before wrapper container hook ?>
 	<div id="wrapper" class="clearfix">
 <?php responsive_wrapper_top(); // before wrapper content hook ?>
 <?php responsive_in_wrapper(); // wrapper hook ?>
+
+<!-- /.slide-top -->
