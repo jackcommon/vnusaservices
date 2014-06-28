@@ -2,7 +2,7 @@
 
 // Exit if accessed directly
 if( !defined( 'ABSPATH' ) ) {
-	exit;
+  exit;
 }
 
 /**
@@ -22,52 +22,32 @@ if( !defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<div id="content" class="grid col-620">
+<div class="content_top">
+  <h1 class="title">WE west meet East Geate the changes we want to see in our world TM</h1>
+<!-- /.content_top --></div>
 
-	<?php if( have_posts() ) : ?>
+<?php get_sidebar('sidebar'); ?>
 
-		<?php while( have_posts() ) : the_post(); ?>
-
-			<?php responsive_entry_before(); ?>
-			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php responsive_entry_top(); ?>
-
-				<?php get_template_part( 'post-meta-page' ); ?>
-
-				<div class="post-entry">
-					<?php if( has_post_thumbnail() ) : ?>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-							<?php the_post_thumbnail(); ?>
-						</a>
-					<?php endif; ?>
-					<?php the_content( __( 'Read more &#8250;', 'responsive' ) ); ?>
-					<?php wp_link_pages( array( 'before' => '<div class="pagination">' . __( 'Pages:', 'responsive' ), 'after' => '</div>' ) ); ?>
-				</div>
-				<!-- end of .post-entry -->
-
-				<?php get_template_part( 'post-data' ); ?>
-
-				<?php responsive_entry_bottom(); ?>
-			</div><!-- end of #post-<?php the_ID(); ?> -->
-			<?php responsive_entry_after(); ?>
-
-			<?php responsive_comments_before(); ?>
-			<?php comments_template( '', true ); ?>
-			<?php responsive_comments_after(); ?>
-
-		<?php
-		endwhile;
-
-		get_template_part( 'loop-nav' );
-
-	else :
-
-		get_template_part( 'loop-no-posts' );
-
-	endif;
-	?>
-
+<div id="content" class="">
+  <div id="rectangle">
+    <div class="business">
+      <p><a href="#">Business Developing</a></p>
+    <!-- /.business --></div>
+    <div class="logo_center">
+      <ul>
+        <li class="last"><a href="#" class="traveling">Traveling - VISA</a></li>
+        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/core/images/default-logo.png" width="240" height="130" alt="Logo center"></a></li>
+        <li class="last"><a href="#" class="languages_edu">Languages - Education</a></li>
+      </ul>   
+    <!-- /.logo_center --></div>
+    <div class="row_other">
+      <ul>
+        <li><a href="#" class="other">Other</a></li>
+        <li><a href="#" class="jobs">Jobs</a></li>
+      </ul>
+    <!-- /.row_other --></div>
+  <!-- /#rectangle --></div>
 </div><!-- end of #content -->
 
-<?php get_sidebar(); ?>
+
 <?php get_footer(); ?>

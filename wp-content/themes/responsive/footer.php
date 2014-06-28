@@ -65,19 +65,17 @@ $responsive_options = responsive_get_options();
 		<?php get_sidebar( 'colophon' ); ?>
 
 		<div class="grid col-300 copyright">
-			<?php esc_attr_e( '&copy;', 'responsive' ); ?> <?php echo date( 'Y' ); ?><a href="<?php echo home_url( '/' ) ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-				<?php bloginfo( 'name' ); ?>
+      Design by <a href="http://vnaka.com">vnaka.com</a>
 			</a>
 		</div>
 		<!-- end of .copyright -->
 
+  <!-- arrow back to top -->
 		<div class="grid col-300 scroll-top"><a href="#scroll-top" title="<?php esc_attr_e( 'scroll to top', 'responsive' ); ?>"><?php _e( '&uarr;', 'responsive' ); ?></a></div>
-
+  <!-- /end arrow back to top -->
 		<div class="grid col-300 fit powered">
 			<a href="<?php echo esc_url( 'http://cyberchimps.com/responsive-theme/' ); ?>" title="<?php esc_attr_e( 'Responsive Theme', 'responsive' ); ?>">
-				Responsive Theme</a>
-			<?php esc_attr_e( 'powered by', 'responsive' ); ?> <a href="<?php echo esc_url( 'http://wordpress.org/' ); ?>" title="<?php esc_attr_e( 'WordPress', 'responsive' ); ?>">
-				WordPress</a>
+        Copyright &copy; VNUSASERVICES Co.,ltd. All rights reserved.
 		</div>
 		<!-- end .powered -->
 
