@@ -21,7 +21,9 @@ if( !defined( 'ABSPATH' ) ) {
  */
 
 get_header(); ?>
-<div id="content" class="grid col-620" style="overflow: hidden; float: right; dislay: inline-block; width: 250px;">
+
+<div id="content" class="grid col-620">
+
   <?php if( have_posts() ) : ?>
 
     <?php while( have_posts() ) : the_post(); ?>
@@ -50,7 +52,9 @@ get_header(); ?>
       <?php responsive_entry_after(); ?>
 
       <?php responsive_comments_before(); ?>
-      <?php comments_template( '', true ); ?>
+      <?php 
+        comments_template( '', true ); 
+      ?>
       <?php responsive_comments_after(); ?>
 
     <?php
@@ -66,8 +70,6 @@ get_header(); ?>
   ?>
 
 </div><!-- end of #content -->
-<div class='thinh' style="overflow: hidden; float: left; dislay: inline-block; width: 250px;">
+
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
-</div>
-
