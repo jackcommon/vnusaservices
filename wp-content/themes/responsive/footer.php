@@ -65,8 +65,7 @@ $responsive_options = responsive_get_options();
 		<?php get_sidebar( 'colophon' ); ?>
 
 		<div class="grid col-300 copyright">
-      Design by <a href="http://vnaka.com">vnaka.com</a>
-			</a>
+      Design by <a href="http://vnaka.com">VNAKA Media</a>
 		</div>
 		<!-- end of .copyright -->
 
@@ -76,6 +75,7 @@ $responsive_options = responsive_get_options();
 		<div class="grid col-300 fit powered">
 			<a href="<?php echo esc_url( 'http://cyberchimps.com/responsive-theme/' ); ?>" title="<?php esc_attr_e( 'Responsive Theme', 'responsive' ); ?>">
         Copyright &copy; VNUSASERVICES Co.,ltd. All rights reserved.
+      </a>
 		</div>
 		<!-- end .powered -->
 

@@ -36,3 +36,177 @@ function responsive_free_get_option( $option, $default = false ) {
 
 	return $default;
 }
+
+// Creates Home Sidebar Post Type
+function home_sidebar_init() {
+    $args = array(
+      'label' => 'Home Sidebar',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'home-sidebar'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-video-alt',
+        'supports' => array(
+            'title',
+            // 'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes',
+            )
+        );
+    register_post_type( 'home-sidebar', $args );
+}
+add_action( 'init', 'home_sidebar_init' );
+
+// Creates Home Rectangle Custom Post Type
+function home_rectangle_init() {
+    $args = array(
+      'label' => 'Home Rectangle',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'home-rectangle'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-video-alt',
+        'supports' => array(
+            'title',
+            // 'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes',
+            )
+        );
+    register_post_type( 'home-rectangle', $args );
+}
+add_action( 'init', 'home_rectangle_init' );
+
+// Creates Home Sidebar Post Type
+register_sidebar( array(
+            'name'          => __( 'Jacky Landing Page Widget', 'responsive' ),
+            'description'   => __( 'Area 13 - sidebar-footer.php - Maximum of 3 widgets per row', 'responsive' ),
+            'id'            => 'footer-widget',
+            'before_title'  => '<div class="widget-title"><h3>',
+            'after_title'   => '</h3></div>',
+            'before_widget' => '<div id="%1$s" class="grid col-300 %2$s"><div class="widget-wrapper">',
+            'after_widget'  => '</div></div>'
+          ) );
+
+// Creates Education Clubs Post Type
+function educationclubs_sidebar_init() {
+    $args = array(
+      'label' => '&nbsp;&nbsp;&nbsp;EducationClubs',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'educationclubs'),
+        'query_var' => true,
+        'menu_icon' => 'dashicons-video-alt',
+        'supports' => array(
+            'title',
+            // 'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes',
+            )
+        );
+    register_post_type( 'educationclubs', $args );
+}
+add_action( 'init', 'educationclubs_sidebar_init' );
+
+function wpse87681_enqueue_custom_stylesheets() {
+    if ( ! is_admin() ) {
+        wp_enqueue_style( 'mytheme-custom', get_template_directory_uri() . '/jacky/css/custom.css' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'wpse87681_enqueue_custom_stylesheets', 11 );
+
+/* News
+--------------------------------
+add_action('init', 'news');
+function news() {
+  $params = array(
+    'labels' => array(
+      'name' => 'News',
+      'singular_name' => 'News',
+      'add_new' => 'Add New News',
+      'add_new_item' => 'Add New News',
+      'edit_item' => 'Edit News',
+      'new_item' => 'New News',
+      'all_items' => 'All News',
+      'view_item' => 'View News',
+      'search_items' => 'Search',
+      'not_found' => 'Not Found',
+      'not_found_in_trash' => 'Not Found in Trash'
+    ),
+    'public' => true,
+    'has_archive' => true,
+    'supports' => array(
+      'title'
+    )
+  );
+  register_post_type('news', $params);
+  $labels = array(
+    'name' => _x( 'Categories', 'taxonomy general name' ),
+    'singular_name' => _x( 'Categories', 'taxonomy singular name' ),
+    'search_items' =>  __( 'Search Categories' ),
+    'popular_items' => __( 'Popular Categories' ),
+    'all_items' => __( 'All Categories' ),
+    'parent_item' => null,
+    'parent_item_colon' => null,
+    'edit_item' => __( 'Edit Categories' ), 
+    'update_item' => __( 'Update Categories' ),
+    'add_new_item' => __( 'Add New Categories' ),
+    'new_item_name' => __( 'New Categories Name' ),
+    'separate_items_with_commas' => __( 'Separate writers with commas' ),
+    'add_or_remove_items' => __( 'Add or remove writers' ),
+    'choose_from_most_used' => __( 'Choose from the most used writers' )
+  ); 
+  $argsTax = array(
+    'hierarchical' => false,
+    'labels' => $labels,
+    'show_ui' => true,
+    'query_var' => true,
+    'rewrite' => array( 'slug' => 'Categories' ),
+  );
+
+  register_taxonomy('Categories', 'news', $argsTax );  
+}
+
+function show_term_area( $defaults ) {
+  $defaults['Categories'] = 'Categories';
+  return $defaults;
+}
+add_filter('manage_news_posts_columns', 'show_term_area', 15, 1);
+
+function show_term_area_id($column_name, $id) {
+  if( $column_name == 'Categories' ) {
+    $terms = $terms = get_the_terms( $id, 'Categories' );
+    $cnt = 0;
+    foreach($terms as $var) {
+      echo $cnt != 0 ? ", " : "";
+      echo "<a href=\"" . get_admin_url() . "edit.php?Categories=" . $var->slug . "&post_type=news" . "\">" . $var->name . "</a>";
+      ++$cnt;
+    }
+  }
+}
+add_action('manage_news_posts_custom_column', 'show_term_area_id', 15, 2);
+*/
