@@ -1,6 +1,5 @@
 #!/bin/bash
-# My example bash script
 mysqldump -u vnusa -pvnusa vnusa > db_sync.sql
-#git add db_sync.sql
-#git commit
-#git push https://github.com/jackcommon/vnusaservices.git
+git add db_sync.sql
+git commit
+git push https://github.com/jackcommon/vnusaservices.git
