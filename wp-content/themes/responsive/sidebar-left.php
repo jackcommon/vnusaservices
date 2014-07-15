@@ -34,7 +34,10 @@ if( !defined( 'ABSPATH' ) ) {
 
 			</div><!-- end of .widget-wrapper -->
 		<?php endif; //end of right-left ?>
-
+      <div>
+        <p>Username: vnusaservices</p>
+        <p>Password: vnusaservices</p>
+      </div>
 		<?php responsive_widgets_end(); // after widgets hook ?>
 	</div><!-- end of #widgets -->
 <?php responsive_widgets_after(); // after widgets container hook ?>

@@ -95,34 +95,37 @@ if( !defined( 'ABSPATH' ) ) {
 
     <?php endif; // header image was removed (again) ?>
 
-    <?php get_sidebar( 'top' ); ?>
-    <?php wp_nav_menu( array(
-                 'container'       => 'div',
-                 'container_class' => 'main-nav',
-                 'fallback_cb'     => 'responsive_fallback_menu',
-                 'theme_location'  => 'header-menu'
-               )
-    );
-    ?>
-
-    <?php if( has_nav_menu( 'sub-header-menu', 'responsive' ) ) { ?>
+    <div class="silde-header" style="margin-bottom: 0px;">
+      <?php 
+              echo do_shortcode("[metaslider id=11]"); // replace 123 with your slideshow ID
+      ?>
+    <!-- /.silde-header --></div>
+    <div id="hello" style="padding-top: -50px;">
+      <!--<?php get_sidebar( 'top' ); ?>-->
       <?php wp_nav_menu( array(
-                   'container'      => '',
-                   'menu_class'     => 'sub-header-menu',
-                   'theme_location' => 'sub-header-menu'
+                   'container'       => 'div',
+                   'container_class' => 'main-nav',
+                   'fallback_cb'     => 'responsive_fallback_menu',
+                   'theme_location'  => 'header-menu'
                  )
       );
       ?>
-    <?php } ?>
+<!--
+      <?php if( has_nav_menu( 'sub-header-menu', 'responsive' ) ) { ?>
+        <?php wp_nav_menu( array(
+                     'container'      => '',
+                     'menu_class'     => 'sub-header-menu',
+                     'theme_location' => 'sub-header-menu'
+                   )
+        );
+        ?>
+      <?php } ?>
+-->
+    </div>
 
     <?php responsive_header_bottom(); // after header content hook ?>
 
   </div><!-- end of #header -->
-<div class="silde-header" style="margin-bottom: 30px;">
-  <?php 
-          echo do_shortcode("[metaslider id=11]"); // replace 123 with your slideshow ID
-  ?>
-<!-- /.silde-header --></div> 
 <?php responsive_header_end(); // after header container hook ?>
 
 <?php responsive_wrapper(); // before wrapper container hook ?>

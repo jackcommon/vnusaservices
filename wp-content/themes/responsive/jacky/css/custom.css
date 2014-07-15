@@ -148,3 +148,32 @@
   position: absolute;
   z-index: 1000;  
 }
+
+/* =jacky
+-------------------------------------------------------------- */
+body {
+  background-image:url("../images/pattern32.png");
+}
+
+.menu li li a {
+  background: #585858 !important;;
+  border-left: 1px solid #585858;
+  color: #ffffff;
+  cursor: pointer;
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  height: 45px;
+  line-height: 45px;
+  margin: 0;
+  padding: 0 0.9em;xa
+  position: relative;
+  text-decoration: none;
+  text-shadow: 0 -1px 0 #000000;
+  white-space: nowrap;
+}
+
+.menu li li a:hover {
+    background: #ffa500 !important;
+    color: #444444;
+}
