@@ -95,13 +95,13 @@ add_action( 'init', 'home_rectangle_init' );
 
 // Creates Home Sidebar Post Type
 register_sidebar( array(
-            'name'          => __( 'Jacky Landing Page Widget', 'responsive' ),
-            'description'   => __( 'Area 13 - sidebar-footer.php - Maximum of 3 widgets per row', 'responsive' ),
-            'id'            => 'footer-widget',
+            'name'          => __( 'Jacky Left Widget Sidebar', 'responsive' ),
+            'description'   => __( 'Area 13 - sidebar-uleft.php', 'responsive' ),
+            'id'            => 'uleft-sidebar',
             'before_title'  => '<div class="widget-title"><h3>',
             'after_title'   => '</h3></div>',
-            'before_widget' => '<div id="%1$s" class="grid col-300 %2$s"><div class="widget-wrapper">',
-            'after_widget'  => '</div></div>'
+            'before_widget' => '<div id="%1$s" class="%2$s">',
+            'after_widget'  => '</div>'
           ) );
 
 // Creates Education Clubs Post Type
@@ -138,6 +138,15 @@ function wpse87681_enqueue_custom_stylesheets() {
     }
 }
 add_action( 'wp_enqueue_scripts', 'wpse87681_enqueue_custom_stylesheets', 11 );
+
+add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+function special_nav_class($classes, $item){
+    $menu_locations = get_nav_menu_locations();
+    if ( has_term($menu_locations['primary-menu'], 'nav_menu', $item) ) {
+        $classes[] = 'btttn';
+    }
+    return $classes;
+}
 
 /* News
 --------------------------------

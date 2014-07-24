@@ -18,7 +18,7 @@ Template Name:  Page Home
 get_header(); ?>
 
 <div class="content_top">
-  <h1 class="title">WE west meet East Geate the changes we want to see in our world TM</h1>
+  <!-- <h1 class="title">WE west meet East Geate the changes we want to see in our world TM</h1> -->
 <!-- /.content_top --></div>
 
 <?php get_sidebar('uhome'); ?>

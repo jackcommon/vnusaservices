@@ -70,11 +70,14 @@ $responsive_options = responsive_get_options();
 		<!-- end of .copyright -->
 
   <!-- arrow back to top -->
-		<div class="grid col-300 scroll-top"><a href="#scroll-top" title="<?php esc_attr_e( 'scroll to top', 'responsive' ); ?>"><?php _e( '&uarr;', 'responsive' ); ?></a></div>
+		<div class="grid col-140 scroll-top"><a href="#scroll-top" title="<?php esc_attr_e( 'scroll to top', 'responsive' ); ?>"><?php _e( '&uarr;', 'responsive' ); ?></a></div>
   <!-- /end arrow back to top -->
-		<div class="grid col-300 fit powered">
+		<div class="grid col-460 fit powered">
 			<a href="<?php echo esc_url( 'http://cyberchimps.com/responsive-theme/' ); ?>" title="<?php esc_attr_e( 'Responsive Theme', 'responsive' ); ?>">
-        Copyright &copy; VNUSASERVICES Co.,ltd. All rights reserved.
+        Copyright &copy; American Services Worldwide Ltd. All rights reserved.<br>
+        Address: 14 group 21 Hon Chong st, Nha Trang city, Khanh Hoa, Vietnam.<br>
+        Tel: +84(0) 978 421 279<br>
+        Email: hanh.nguyen.wbbo@gmail.com
       </a>
 		</div>
 		<!-- end .powered -->

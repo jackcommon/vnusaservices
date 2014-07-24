@@ -49,6 +49,9 @@ get_header(); ?>
 <?php 
   if ( is_single( 'home-english' ) ) {?>
     <div align=middle>
+      <div align=left><br>
+        <b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For more information, please click on each icon below:</b>
+      </div>
       <div>
         <span><a href="<?php echo site_url(); ?>/educationclubs/01_doveclub/"><img src="<?php echo get_template_directory_uri(); ?>/jacky/images/a_home_english_button_1dove.png" width="240" alt="Logo center"></a></span>
         <span><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/jacky/images/a_home_english_button_2professionals.png" width="240" alt="Logo center"></a></span>

@@ -48,13 +48,17 @@ if( !defined( 'ABSPATH' ) ) {
 
 <body <?php body_class(); ?>>
 
+<!-- SCM Music Player http://scmplayer.net -->
+<!--<script type="text/javascript" src="http://scmplayer.net/script.js" 
+data-config="{'skin':'skins/tunes/skin.css','volume':43,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','playlist':'https://soundcloud.com/queanhpharma/sets/s-n-t-ng-m-tp'}" ></script>-->
+<!-- SCM Music Player script end -->
+
+
+
 <?php responsive_container(); // before container hook ?>
 <div id="container" class="hfeed">
 
 <?php responsive_header(); // before header hook ?>
-  <div class="skip-container cf">
-    <a class="skip-link screen-reader-text focusable" href="#main"><?php _e( '&darr; Skip to Main Content', 'responsive' ); ?></a>
-  </div><!-- .skip-container -->
   <div id="header">
 
     <?php responsive_header_top(); // before header content hook ?>
@@ -71,35 +75,32 @@ if( !defined( 'ABSPATH' ) ) {
     <?php } ?>
 
     <?php responsive_in_header(); // header hook ?>
-
+    <div id="newannouncement">
+      <?php newannouncement( $group = "GROUP1" ); ?>
+    </div>
     <?php if( get_header_image() != '' ) : ?>
       <div id="top">
-        <div id="logo">
-          <!-- <a href="<?php echo home_url( '/' ); ?>"><img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="<?php bloginfo( 'name' ); ?>"/></a> -->
+        <span id="logo">
           <a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/jacky/images/logo_vnusa.png" alt="<?php bloginfo( 'name' ); ?>"/></a>
-        </div><!-- end of #logo -->
-        <div id="banner_top">
-          <img src="<?php echo get_template_directory_uri(); ?>/jacky/images/banner.png" alt="<?php bloginfo( 'name' ); ?>"/>
-        </div>
+        </span>
+        <span id="banner">
+          <img src="<?php echo get_template_directory_uri(); ?>/jacky/images/banner_140723.png" alt="<?php bloginfo( 'name' ); ?>"/>
+        </span>
         <!-- /#banner_top -->
       </div>
 
     <?php endif; // header image was removed ?>
 
-    <?php if( !get_header_image() ) : ?>
+<!--     <?php if( !get_header_image() ) : ?>
 
       <div id="logo">
         <span class="site-name"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
         <span class="site-description"><?php bloginfo( 'description' ); ?></span>
-      </div><!-- end of #logo -->
+      </div>
 
-    <?php endif; // header image was removed (again) ?>
+    <?php endif; // header image was removed (again) ?> -->
 
-    <div class="silde-header" style="margin-bottom: 0px;">
-      <?php 
-              echo do_shortcode("[metaslider id=11]"); // replace 123 with your slideshow ID
-      ?>
-    <!-- /.silde-header --></div>
+
     <div id="hello" style="padding-top: -50px;">
       <!--<?php get_sidebar( 'top' ); ?>-->
       <?php wp_nav_menu( array(

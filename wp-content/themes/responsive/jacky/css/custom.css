@@ -1,11 +1,27 @@
-/* =Home page
+/* =header.php
 -------------------------------------------------------------- */
-#banner_top {
+#top {
+  overflow: hidden;
+}
+
+/*#banner_top {
   width: 630px;
   float: right;
   display: inline-block;
   margin-left: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
+}*/
+
+span#logo {
+  width: 200px;  
+}
+
+span#banner img{
+  /*width: 20px;  */
+  overflow: hidden;
+  margin-left: 100px;
+  width: 440px;
+  height: auto;
 }
 
 #content {
@@ -13,11 +29,11 @@
   display: inline-block;
 }
 
-.title {
+/*.title {
   text-align: center;
   color: #ff0000;
   font-size: 25px;
-}
+}*/
 /* =aside bar left
 -------------------------------------------------------------- */
 
