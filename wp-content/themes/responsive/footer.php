@@ -65,7 +65,7 @@ $responsive_options = responsive_get_options();
 		<?php get_sidebar( 'colophon' ); ?>
 
 		<div class="grid col-300 copyright">
-      Design by <a href="http://vnaka.com">VNAKA Media</a>
+      Design by <a href="http://vnaka.com" target="_blank">VNAKA Media</a>
 		</div>
 		<!-- end of .copyright -->
 

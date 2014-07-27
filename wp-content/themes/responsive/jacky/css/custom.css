@@ -19,7 +19,7 @@ span#logo, span#qrcode {
 span#banner img{
   /*width: 20px;  */
   overflow: hidden;
-  margin-left: 70px;
+  margin-left: 55px;
   width: 440px;
   height: auto;
 }

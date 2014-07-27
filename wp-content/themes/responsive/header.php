@@ -103,7 +103,9 @@ data-config="{'skin':'skins/tunes/skin.css','volume':43,'autoplay':true,'shuffle
 
     <?php endif; // header image was removed (again) ?> -->
 
-
+<?php
+  if ( !is_page('Landing Page')){
+?>
     <div id="hello" style="padding-top: -50px;">
       <!--<?php get_sidebar( 'top' ); ?>-->
       <?php wp_nav_menu( array(
@@ -126,6 +128,9 @@ data-config="{'skin':'skins/tunes/skin.css','volume':43,'autoplay':true,'shuffle
       <?php } ?>
 -->
     </div>
+<?php
+  }
+?>
 
     <?php responsive_header_bottom(); // after header content hook ?>
 

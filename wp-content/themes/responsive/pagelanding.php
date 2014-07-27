@@ -21,7 +21,8 @@ get_header(); ?>
   <div id="rectangle">
     <div class="logo_center">
       <ul>
-        <li><a href="<?php echo site_url(); ?>/home-page/"><img src="<?php echo get_template_directory_uri(); ?>/jacky/images/a_landingPage2.png" width="600" alt="Logo center"></a></li>
+        <!-- <li><a href="<?php echo site_url(); ?>/home-page/"><img src="<?php echo get_template_directory_uri(); ?>/jacky/images/a_landingPage2.png" width="600" alt="Logo center"></a></li> -->
+        <li><img src="<?php echo get_template_directory_uri(); ?>/jacky/images/a_landingPage2.png" width="600" alt="Logo center"></li>
       </ul>   
     </div>
   </div>
