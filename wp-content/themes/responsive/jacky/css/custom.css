@@ -12,16 +12,21 @@
   margin-bottom: 40px;
 }*/
 
-span#logo {
-  width: 200px;  
+span#logo, span#qrcode {
+  width: 220px;
 }
 
 span#banner img{
   /*width: 20px;  */
   overflow: hidden;
-  margin-left: 100px;
+  margin-left: 70px;
   width: 440px;
   height: auto;
+}
+
+span#qrcode {
+  width: 200px;
+  float: right;
 }
 
 #content {

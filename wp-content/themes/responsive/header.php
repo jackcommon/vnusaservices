@@ -86,6 +86,9 @@ data-config="{'skin':'skins/tunes/skin.css','volume':43,'autoplay':true,'shuffle
         <span id="banner">
           <img src="<?php echo get_template_directory_uri(); ?>/jacky/images/banner_140723.png" alt="<?php bloginfo( 'name' ); ?>"/>
         </span>
+        <span id="qrcode">
+          <img src="<?php echo get_template_directory_uri(); ?>/jacky/images/qrcode.png" alt="<?php bloginfo( 'name' ); ?>"/>
+        </span>
         <!-- /#banner_top -->
       </div>
 
