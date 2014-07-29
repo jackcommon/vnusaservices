@@ -40,7 +40,7 @@ get_header(); ?>
     </span>
   </div>
   <div id="questionnaire">
-    <p align=middle>====================oOo====================</p>
+    <p align=middle>=============oOo=============</p>
 <?php
   if ( is_singular( 'home-rectangle') ) { 
     echo "This is a child page";

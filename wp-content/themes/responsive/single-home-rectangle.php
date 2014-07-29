@@ -16,9 +16,6 @@ if( !defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<!-- <div class="content_top">
-  <h1 class="title">WE west meet East Geate the changes we want to see in our world TM</h1>
-</div> -->
 <div>
   <br>
 </div>
@@ -71,19 +68,19 @@ get_header(); ?>
         $full_content_style = "";
         $ninja_form_id = 0;
         if (is_single('home-business-developing')){
-          $ninja_form_id = 5;
+          $ninja_form_id = 2;
           $full_content_style = "padding-left: 200px";
         } elseif (is_single('home-jobs')){
-          $ninja_form_id = 5;
+          $ninja_form_id = 3;
           $full_content_style = "padding-left: 50px";
         } elseif (is_single('home-other')){
           $ninja_form_id = 5;
         } elseif (is_single('home-traveling-visa')){
-          $ninja_form_id = 5;
+          $ninja_form_id = 6;
           $full_content_style = "padding-left: 200px";
         }
 ?>
-      <div id="full-content" style="<?php echo $full_content_style ?>">
+      <div class="full-content" style="<?php echo $full_content_style ?>">
         <?php echo $full_content ?>
       </div>
       <div class="logo_center" align=right>

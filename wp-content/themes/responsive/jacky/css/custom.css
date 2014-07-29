@@ -75,21 +75,20 @@ span#qrcode {
   color: #ff0000 !important;
 }
 
-#logo_center {
-  overflow: hidden;
+/* =pagehome.php
+-------------------------------------------------------------- */
+#content_sp {
+  display: none;
+  float: right;
 }
 
-/* =business
--------------------------------------------------------------- */
 #content ul {
   list-style: none;
 }
+
 .business {
   overflow: hidden;
   text-align: center;
-}
-.business p {
-  padding: 0 43px 0 0;
 }
 .business a {
   padding: 8px 20px;
@@ -98,11 +97,9 @@ span#qrcode {
   box-shadow: 2px 2px 5px #888888;
 }
 
-/* =travelling, logo and languages
--------------------------------------------------------------- */
-
 .logo_center {
   overflow: hidden;
+  text-align: center;
 }
 #rectangle .logo_center ul li {
   float: left;
@@ -133,10 +130,6 @@ span#qrcode {
   box-shadow: 2px 2px 5px #888888;
   margin-left: 15px; 
 }
-
-
-/* =Other and jobs
--------------------------------------------------------------- */
 
 .row_other {
   margin-left: 65px; 
@@ -197,4 +190,62 @@ body {
 .menu li li a:hover {
     background: #ffa500 !important;
     color: #444444;
+}
+
+
+
+
+/* =mobile of homepage
+-------------------------------------------------------------- */
+@media screen and (max-width: 640px) {
+/* header.php - mobile */
+  span#banner img {
+    text-align: center;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+  span#qrcode {
+    width: 100%;
+    height: auto;
+    float: none;
+  }
+
+  #content {
+    float: none;
+  }
+
+/* pagehome.php - mobile */
+  #content {
+    display: none;
+  }
+  #content_sp {
+    display: block;
+  }
+  .row_other .jobs {
+    margin-left: 0px;
+    text-align: left;
+  }
+  .business, .logo_center {
+    text-align: left;
+  }
+  .logo_center .languages_edu {
+    margin-left: 0px;
+  }
+  .row_other {
+    margin-left: 0px;
+  }
+
+/* simgle-home-rectangle.php - mobile */
+  .main {
+    width: 100% !important;
+  }
+  .main img {
+    width: 100%;
+    height: auto;
+  }
+  .full-content {
+    padding-left: 0 !important;
+  }
+
 }

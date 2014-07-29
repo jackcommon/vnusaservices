@@ -17,10 +17,6 @@ Template Name:  Page Home
 
 get_header(); ?>
 
-<div class="content_top">
-  <!-- <h1 class="title">WE west meet East Geate the changes we want to see in our world TM</h1> -->
-<!-- /.content_top --></div>
-
 <?php get_sidebar('uhome'); ?>
 
 <div id="content" class="">
@@ -31,7 +27,7 @@ get_header(); ?>
     <div class="logo_center">
       <ul>
         <li class="last"><a href="<?php echo site_url(); ?>/home-rectangle/home-traveling-visa/" class="traveling">Traveling - VISA</a></li>
-        <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/jacky/images/logo_vnusa.png" width="240" height="130" alt="Logo center"></a></li>
+        <li><a class="logo_vnusa" href="#"><img src="<?php echo get_template_directory_uri(); ?>/jacky/images/logo_vnusa.png" width="240" height="130" alt="Logo center"></a></li>
         <li class="last"><a href="<?php echo site_url(); ?>/home-rectangle/home-english/" class="languages_edu">Education - English Clubs</a></li>
       </ul>   
     <!-- /.logo_center --></div>
@@ -44,5 +40,15 @@ get_header(); ?>
   <!-- /#rectangle --></div>
 </div><!-- end of #content -->
 
+
+<div id="content_sp" class="">
+  <div id="rectangle">
+    <div class="business"><a href="<?php echo site_url(); ?>/home-rectangle/home-business-developing/">Business Developing</a></div>
+    <div class="logo_center"><a href="<?php echo site_url(); ?>/home-rectangle/home-traveling-visa/" class="traveling">Traveling - VISA</a></div>
+    <div class="logo_center"><a href="<?php echo site_url(); ?>/home-rectangle/home-english/" class="languages_edu">Education - English Clubs</a></div>
+    <div class="row_other"><a href="<?php echo site_url(); ?>/home-rectangle/home-other/" class="other">Other</a></div>
+    <div class="row_other"><a href="<?php echo site_url(); ?>/home-rectangle/home-jobs/" class="jobs">Jobs</a></div>  
+  </div>
+</div>
 
 <?php get_footer(); ?>
