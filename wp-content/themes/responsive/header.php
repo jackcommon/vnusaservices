@@ -52,7 +52,7 @@ if( !defined( 'ABSPATH' ) ) {
 data-config="{'skin':'skins/tunes/skin.css','volume':55,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','playlist':'https://soundcloud.com/queanhpharma/sets/s-n-t-ng-m-tp'}" ></script>-->
 
 <!-- https://soundcloud.com/yanni-music/sets/yanni-inspirato -->
-<script type="text/javascript" src="./jacky/VNAKAmusicplayer/script.js" 
+<script type="text/javascript" src="http://localhost/vnusaservices/jacky/VNAKAmusicplayer/script.js" 
 data-config="{'skin':'skins/tunes/skin.css','volume':60,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','playlist':'https://soundcloud.com/hesham-beram-1/sets/yanni'}" ></script>
 
 
