@@ -48,11 +48,12 @@ if( !defined( 'ABSPATH' ) ) {
 
 <body <?php body_class(); ?>>
 
-<!-- SCM Music Player http://scmplayer.net -->
 <!--<script type="text/javascript" src="http://scmplayer.net/script.js" 
-data-config="{'skin':'skins/tunes/skin.css','volume':43,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','playlist':'https://soundcloud.com/queanhpharma/sets/s-n-t-ng-m-tp'}" ></script>-->
-<!-- SCM Music Player script end -->
+data-config="{'skin':'skins/tunes/skin.css','volume':55,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','playlist':'https://soundcloud.com/queanhpharma/sets/s-n-t-ng-m-tp'}" ></script>-->
 
+<!-- https://soundcloud.com/yanni-music/sets/yanni-inspirato -->
+<script type="text/javascript" src="./jacky/VNAKAmusicplayer/script.js" 
+data-config="{'skin':'skins/tunes/skin.css','volume':60,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','playlist':'https://soundcloud.com/hesham-beram-1/sets/yanni'}" ></script>
 
 
 <?php responsive_container(); // before container hook ?>
