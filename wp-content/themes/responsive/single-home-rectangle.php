@@ -32,7 +32,7 @@ get_header(); ?>
   }
   $title = get_field("title");
   $image = get_field("image");
-  $full_content = get_field("full_content");
+  $full_content_multi = get_field("full_content_multi");
 ?>
 <div class="entry-content">
 <!--   <div class="main" style="margin-left: auto; margin-right: auto; width: 500px">
@@ -81,7 +81,7 @@ get_header(); ?>
         }
 ?>
       <div class="full-content" style="<?php echo $full_content_style ?>">
-        <?php echo $full_content ?>
+        <?php echo $full_content_multi ?>
       </div>
       <div class="logo_center" align=right>
         <span id="click-to-join" class="languages_edu" style="cursor: pointer;">

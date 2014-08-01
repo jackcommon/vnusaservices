@@ -52,8 +52,8 @@ if( !defined( 'ABSPATH' ) ) {
 data-config="{'skin':'skins/tunes/skin.css','volume':55,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','playlist':'https://soundcloud.com/queanhpharma/sets/s-n-t-ng-m-tp'}" ></script>-->
 
 <!-- https://soundcloud.com/yanni-music/sets/yanni-inspirato -->
-<script type="text/javascript" src="http://localhost/vnusaservices/jacky/VNAKAmusicplayer/script.js" 
-data-config="{'skin':'skins/tunes/skin.css','volume':60,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','playlist':'https://soundcloud.com/hesham-beram-1/sets/yanni'}" ></script>
+<!--<script type="text/javascript" src="http://localhost/vnusaservices/jacky/VNAKAmusicplayer/script.js" 
+data-config="{'skin':'skins/tunes/skin.css','volume':60,'autoplay':true,'shuffle':true,'repeat':1,'placement':'top','playlist':'https://soundcloud.com/hesham-beram-1/sets/yanni'}" ></script>-->
 
 
 <?php responsive_container(); // before container hook ?>
@@ -108,6 +108,8 @@ data-config="{'skin':'skins/tunes/skin.css','volume':60,'autoplay':true,'shuffle
   if ( !is_page('Landing Page')){
 ?>
     <div id="hello" style="padding-top: -50px;">
+      <div class="inner">
+      
       <!--<?php get_sidebar( 'top' ); ?>-->
       <?php wp_nav_menu( array(
                    'container'       => 'div',
@@ -128,11 +130,11 @@ data-config="{'skin':'skins/tunes/skin.css','volume':60,'autoplay':true,'shuffle
         ?>
       <?php } ?>
 -->
-    </div>
 <?php
   }
 ?>
-
+<div class="chooser" style="float: right"><?php qtrans_generateLanguageSelectCode('image'); ?></div>
+    
     <?php responsive_header_bottom(); // after header content hook ?>
 
   </div><!-- end of #header -->

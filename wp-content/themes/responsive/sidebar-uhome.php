@@ -1,22 +1,15 @@
+
 <?php
-
-/*// Exit if accessed directly
-if( !defined( 'ABSPATH' ) ) {
-  exit;
-}
-*/
-?>
-
-<!-- <div>
+  $args = array (
+    'post_type' => 'home-sidebar',
+    'show-posts' => -1
+    );
+    query_posts($args);
+ ?>
+ <div class="side_bar">
   <ul>
-    <li><a href="#">About us</a></li>
-  </ul>  
-</div> -->
-<div class="side_bar">
-  <ul>
-    <li><a href="<?php echo site_url(); ?>/home-sidebar/who-we-are/">Who we are</a></li>
-    <li><a href="<?php echo site_url(); ?>/home-sidebar/what-we-do-why-we-are-here/">Why we are here</a></li>
-    <li><a href="<?php echo site_url(); ?>/home-sidebar/why-choose-us/">Why choose us</a></li>
+  <?php if ( have_posts()) : while( have_posts() ) : the_post();?>
+    <li><a href="<?php echo the_permalink(); ?>"><?php echo the_title(); ?></a></li>
+  <?php endwhile; endif; wp_reset_query(); ?>
   </ul>
 </div>
-<!-- /.side_bar -->

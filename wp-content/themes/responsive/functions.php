@@ -78,7 +78,7 @@ function home_rectangle_init() {
         'menu_icon' => 'dashicons-video-alt',
         'supports' => array(
             'title',
-            'editor',
+            // 'editor',
             'excerpt',
             'trackbacks',
             'custom-fields',

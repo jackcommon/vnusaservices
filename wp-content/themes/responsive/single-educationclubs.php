@@ -25,14 +25,14 @@ get_header(); ?>
   // }
   $title = get_field("title");
   $image = get_field("image");
-  $full_content = get_field("full_content");
+  $full_content_multi = get_field("full_content_multi");
 ?>
 <div class="entry-content">
   <div class="main" style="margin-left: auto; margin-right: auto; width: 450px" align='middle'>
     <p><img src='<?php echo $image?>' width='500' alt='<?php echo the_title(); ?>'/></p>
   </div>
   <div class="full-content" style="padding-left: 200px;">
-    <?php echo $full_content ?>
+    <?php echo $full_content_multi ?>
   </div>
   <div class="logo_center" align=right>
     <span id="click-to-join" class="languages_edu" style="cursor: pointer;">
