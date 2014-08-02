@@ -67,31 +67,96 @@ get_header(); ?>
 <?php } else {
         $full_content_style = "";
         $ninja_form_id = 0;
+        $ninja_form_id2 = 0;
         if (is_single('home-business-developing')){
           $ninja_form_id = 2;
           $full_content_style = "padding-left: 200px";
         } elseif (is_single('home-jobs')){
           $ninja_form_id = 3;
+          $ninja_form_id2 = 4;
           $full_content_style = "padding-left: 50px";
         } elseif (is_single('home-other')){
-          $ninja_form_id = 5;
+          // $ninja_form_id = 5;
         } elseif (is_single('home-traveling-visa')){
           $ninja_form_id = 6;
+          $ninja_form_id2 = 7;          
           $full_content_style = "padding-left: 200px";
+        }
+
+        if (qtrans_getLanguage()=="vi"){
+          if (is_single('home-business-developing')){
+            $ninja_form_id = 2;
+            $full_content_style = "padding-left: 200px";
+          } elseif (is_single('home-jobs')){
+            $ninja_form_id = 11;
+            $ninja_form_id2 = 12;
+            $full_content_style = "padding-left: 50px";
+          } elseif (is_single('home-other')){
+            // $ninja_form_id = 5;
+          } elseif (is_single('home-traveling-visa')){
+            $ninja_form_id = 9;
+            $ninja_form_id2 = 10;      
+            $full_content_style = "padding-left: 200px";
+          }
         }
 ?>
       <div class="full-content" style="<?php echo $full_content_style ?>">
         <?php echo $full_content_multi ?>
       </div>
-      <div class="logo_center" align=right>
-        <span id="click-to-join" class="languages_edu" style="cursor: pointer;">
-          Click here to join!!!
-        </span>
-      </div>
-      <div id="questionnaire">
-        <p align=middle>====================oOo====================</p>
-        <p><?php ninja_forms_display_form($ninja_form_id) ?></p>
-      </div>
+      <?php if ( $ninja_form_id !== 0 ){ ?>
+        <div class="survey" align=right>
+          <span id="click_to_join" style="cursor: pointer;">
+            <?php if( function_exists( 'qtrans_getLanguage' ) ){
+              if (qtrans_getLanguage()=="en"){
+                if (is_single('home-jobs')){
+                  echo "Click here to Seeking For A Job!!!";
+                } elseif (is_single('home-traveling-visa')) {
+                  echo "Click here to register VISA For Foreigner!!!";
+                } else {
+                  echo "Click here to join!!!";
+                }
+              } elseif ((qtrans_getLanguage()=="vi")) {
+                if (is_single('home-jobs')){
+                  echo "Nhấn vào đây để đăng ký Tìm Việc!!!";
+                } elseif (is_single('home-traveling-visa')) {
+                  echo "Nhấn vào đây để đăng ký VISA Cho Người Nước Ngoài";
+                } else {
+                   echo "Nhấn vào đây để đăng ký!!!";
+                }
+              } 
+            }?>
+          </span>
+        <?php if ((is_single('home-jobs')) || (is_single('home-traveling-visa'))){?>
+          <span id="click_to_join2" style="cursor: pointer;">
+            <?php if( function_exists( 'qtrans_getLanguage' ) ){
+              if (qtrans_getLanguage()=="en"){
+                if (is_single('home-jobs')){
+                  echo "Click here to Seeking For Employees!!!";
+                } elseif (is_single('home-traveling-visa')) {
+                  echo "Click here to register VISA For Vietnamese!!!";
+                }
+              } elseif ((qtrans_getLanguage()=="vi")) {
+                if (is_single('home-jobs')){
+                  echo "Nhấn vào đây để đăng ký Tìm Nhân Viên!!!";
+                } elseif (is_single('home-traveling-visa')) {
+                  echo "Nhấn vào đây để đăng ký VISA Cho Người Việt Nam";
+                }
+              } 
+            }?>
+          </span>
+        <?php } ?>
+        </div>
+        <div id="questionnaire">
+          <p align=middle>====================oOo====================</p>
+          <p><?php ninja_forms_display_form($ninja_form_id) ?></p>
+        </div>
+          <?php if ((is_single('home-jobs')) || (is_single('home-traveling-visa'))){?>
+            <div id="questionnaire2">
+              <p align=middle>====================oOo====================</p>
+              <p><?php ninja_forms_display_form($ninja_form_id2) ?></p>
+            </div>
+          <?php } ?>
+      <?php } ?>
 <?php } ?>
   <!--end of 'main'--></div>
 </div>
@@ -99,8 +164,15 @@ get_header(); ?>
   <script src="<?php echo get_template_directory_uri(); ?>/jacky/js/jquery-2.1.1.min.js"></script> 
   <script>
     $( "#questionnaire" ).hide();
-    $( "#click-to-join" ).click(function() {
+    $( "#click_to_join" ).click(function() {
+      $( "#questionnaire2" ).hide();
       $( "#questionnaire" ).slideToggle( "slow" );
+    });
+
+    $( "#questionnaire2" ).hide();
+    $( "#click_to_join2" ).click(function() {
+      $( "#questionnaire" ).hide();
+      $( "#questionnaire2" ).slideToggle( "slow" );
     });
   </script>
 </div>

@@ -36,7 +36,16 @@ get_header(); ?>
   </div>
   <div class="logo_center" align=right>
     <span id="click-to-join" class="languages_edu" style="cursor: pointer;">
-      Click here to join!!!
+      <?php $ninja_form_id = 0; ?>
+      <?php if( function_exists( 'qtrans_getLanguage' ) ){
+        if (qtrans_getLanguage()=="en"){
+          $ninja_form_id = 5;
+          echo "Click here to join!!!";
+        } elseif ((qtrans_getLanguage()=="vi")) {
+          $ninja_form_id = 8;
+          echo "Nhấn vào đây để đăng ký!!!";
+        } 
+      }?>
     </span>
   </div>
   <div id="questionnaire">
@@ -45,7 +54,7 @@ get_header(); ?>
   if ( is_singular( 'home-rectangle') ) { 
     echo "This is a child page";
   } elseif ( is_singular( 'educationclubs') ) {?>
-    <p><?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( 5 ); } ?></p>
+    <p><?php if( function_exists( 'ninja_forms_display_form' ) ){ ninja_forms_display_form( $ninja_form_id ); } ?></p>
 <?php 
   } 
 ?>

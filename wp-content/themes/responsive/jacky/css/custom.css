@@ -219,6 +219,27 @@ body {
 }
 
 
+/* =single-home-rectangle.php
+-------------------------------------------------------------- */
+.survey {
+  /*overflow: hidden;*/
+  text-align: center;
+}
+.survey #click_to_join {
+  padding: 8px 20px;
+  color: #fff;
+  background: #e61bda;
+  box-shadow: 2px 2px 5px #888888;
+  margin-left: 15px;
+}
+
+.survey #click_to_join2 {
+  padding: 8px 20px;
+  color: #fff;
+  background: #e61bda;
+  box-shadow: 2px 2px 5px #888888;
+  margin-left: 15px;
+}
 
 
 /* =mobile of homepage
