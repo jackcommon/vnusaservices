@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /vnusaservices/
+RewriteBase /vnusa/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /vnusaservices/index.php [L]
+RewriteRule . /vnusa/index.php [L]
 </IfModule>
 
 # END WordPress

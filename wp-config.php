@@ -17,7 +17,7 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 if ($_SERVER["HTTP_HOST"] === 'localhost'){
-  $db_name = 'vnusaservices';
+  $db_name = 'vnusa';
   $db_user = 'root';
   $password = '';
 } elseif ($_SERVER["HTTP_HOST"] === 'vnusaservices.com'){
