@@ -133,7 +133,7 @@ data-config="{'skin':'skins/tunes/skin.css','volume':60,'autoplay':true,'shuffle
 <?php
   }
 ?>
-<div class="chooser" style="float: right"><?php qtrans_generateLanguageSelectCode('image'); ?></div>
+<div class="chooser" style="float: right"><?php qtrans_generateLanguageSelectCode('dropdown'); ?></div>
     
     <?php responsive_header_bottom(); // after header content hook ?>
 
